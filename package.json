@@ -6,11 +6,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./build/index.js",
-    "debug": "nodemon --exec babel-node index.js --debug",
-    "babel": "babel-node index.js",
-    "babel-node-debug": "nodemon --exec babel-node-debug index.js",
+    "debug": "nodemon --exec babel-node ./src/index.js --debug",
+    "babel": "babel-node ./src/index.js",
+    "babel-node-debug": "nodemon --exec babel-node-debug ./src/index.js",
     "clean": "rm -rf build && mkdir build",
-    "build-server": "babel -d ./build ./*.js -s",
+    "build-server": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-server",
     "check-outdated": "npm outdated --depth 0"
   },
