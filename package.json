@@ -2,7 +2,9 @@
   "name": "babel-js-test",
   "version": "1.0.0",
   "description": "",
-  "engines" : { "node" : ">=6.3.1 <6.9.4" },
+  "engines": {
+    "node": ">=6.3.1 <6.9.4"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node ./build/index.js",
@@ -12,7 +14,8 @@
     "clean": "rm -rf build && mkdir build",
     "build-server": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-server",
-    "check-outdated": "npm outdated --depth 0"
+    "check-outdated": "npm outdated --depth 0",
+    "test": "mocha --compilers js:babel-register"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,7 @@
     "babel-cli": "^6.18.0",
     "babel-node-debug": "^2.0.0",
     "babel-preset-latest": "^6.16.0",
+    "mocha": "^3.2.0",
     "nodemon": "^1.11.0"
   }
 }

@@ -3,5 +3,5 @@
 // }
 
 export default name => {
-  return `Hello my friend ${name}`
+  return `Hello my friend ${name}`;
 }
