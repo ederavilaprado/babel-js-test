@@ -2,6 +2,4 @@
 //   return 'Hello my friend'
 // }
 
-export default name => {
-  return `Hello my friend ${name}`;
-}
+export default name => `Hello my friend ${name}`;

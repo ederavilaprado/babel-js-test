@@ -15,7 +15,8 @@
     "build-server": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-server",
     "check-outdated": "npm outdated --depth 0",
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha --compilers js:babel-register",
+    "lint": "eslint ./src ./test"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,9 @@
     "babel-cli": "^6.18.0",
     "babel-node-debug": "^2.0.0",
     "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0"
   }
