@@ -1,0 +1,26 @@
+{
+  "name": "babel-js-test",
+  "version": "1.0.0",
+  "description": "",
+  "engines" : { "node" : ">=6.3.1 <6.9.4" },
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./build/index.js",
+    "debug": "nodemon --exec babel-node index.js --debug",
+    "babel": "babel-node index.js",
+    "babel-node-debug": "nodemon --exec babel-node-debug index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "babel -d ./build ./*.js -s",
+    "build": "npm run clean && npm run build-server",
+    "check-outdated": "npm outdated --depth 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-node-debug": "^2.0.0",
+    "babel-preset-latest": "^6.16.0",
+    "nodemon": "^1.11.0"
+  }
+}
